@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
-import axios from '../axios/axios';
+import React, {useState} from 'react';
+//import axios from '../axios/axios';
+import Symbols  from '../data/symbol';
 import TargetCurrency from '../Components/TargetCurrency';
 import BaseCurrency from '../Components/BaseCurrency';
 import Amount from '../Components/Amount';
@@ -9,8 +10,8 @@ function Calculator() {
       const [baseCurrency, setBaseCurrency] = useState("");
       const [targetCurrency, setTargetCurency] = useState("");
 
-      const [symbol, setSymbol] = useState("");
-
+    /* const [symbol, setSymbol] = useState("");
+      
     useEffect(() => {
         //fetch list of symbol from endpoint
         const fetchData = async() => {
@@ -24,7 +25,7 @@ function Calculator() {
 
         fetchData();
         //eslint-disable-next-line
-    }, []);
+    }, []);*/
 
   return (
     <React.Fragment>
@@ -32,10 +33,10 @@ function Calculator() {
         <div className="container mt-4 mt-lg-0">
             <div className="row">
                 <div className="col-md-6">
-                    <BaseCurrency setBaseCurrency={setBaseCurrency} symbol={symbol}/>
+                    <BaseCurrency setBaseCurrency={setBaseCurrency} symbol={Symbols.symbols}/>
                 </div>
                 <div className="col-md-6">
-                    <TargetCurrency setTargetCurency={setTargetCurency} symbol={symbol}/>
+                    <TargetCurrency setTargetCurency={setTargetCurency} symbol={Symbols.symbols}/>
                 </div>
                 <div className="col-md-6 mx-auto mb-4 mb-lg-0">
                     <Amount baseCurrency={baseCurrency} targetCurrency={targetCurrency}/>

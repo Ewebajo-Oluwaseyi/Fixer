@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import axios from '../axios/axios';
+//import axios from '../axios/axios';
+import Rates from '../data/rates';
 
 const Amount = ({baseCurrency, targetCurrency}) => {
     const [input, setInput] = useState("");
@@ -39,14 +40,14 @@ const Amount = ({baseCurrency, targetCurrency}) => {
                 //set loading to true
                 setLoading(true);
 
-                const selectedSymbols = `EUR, ${baseCurrency}, ${targetCurrency}`
+              /*  const selectedSymbols = `EUR, ${baseCurrency}, ${targetCurrency}`
                 //fetch rate from the endpoint
                 const res = await axios.get('/latest', {
                     params: {
                       symbols: selectedSymbols,
                     }
-                });
-                const rates = res.data.rates; //rate
+                });*/
+                const rates = Rates.rates; //rate
                 const conversion = (input * rates[targetCurrency] / rates[baseCurrency]).toFixed(5) //currency conversion formula 
                 setResult(conversion);// update conversion result
                 //set loading to false
