@@ -3,7 +3,7 @@ import axios from 'axios';
 const KEY = process.env.REACT_APP_API_KEY;
 
 export default axios.create({
-    baseURL: "https://data.fixer.io/api/",
+    baseURL: "http://data.fixer.io/api/",
     params: {
       access_key: KEY
     },

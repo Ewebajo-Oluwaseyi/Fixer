@@ -25,7 +25,7 @@ function Calculator() {
         fetchData();
         //eslint-disable-next-line
     }, []);
-    console.log(targetCurrency);
+    
   return (
     <React.Fragment>
       <div className='calculator'>

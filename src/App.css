@@ -157,7 +157,7 @@ body {
   grid-template-columns: 70% 50%;
   font-family: Nunito Sans, "monospace";
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   .home .homeContainer {
     grid-template-columns: 100%;
   }
@@ -232,16 +232,23 @@ body {
   height: 350px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   .home .homeContainer .homeImg {
     margin: auto;
   }
   .home .homeContainer .homeImg img {
     background: #17202a !important;
-    margin-top: 4rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
     width: 250px;
     height: 250px;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .home .homeContainer .homeImg img {
+    width: 300px;
+    height: 300px;
   }
 }
 
