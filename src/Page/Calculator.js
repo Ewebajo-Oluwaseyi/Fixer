@@ -16,6 +16,7 @@ function Calculator() {
         const fetchData = async() => {
             try {
                 const res = await axios.get('/symbols');
+                console.log(res)
                 setSymbol(res.data.symbols)
             } catch(err) {
                 
@@ -25,7 +26,7 @@ function Calculator() {
         fetchData();
         //eslint-disable-next-line
     }, []);
-    
+
   return (
     <React.Fragment>
       <div className='calculator'>
