@@ -7,6 +7,7 @@ const SymbolsList = ({symbols, name, onChangeHandler}) => {
     return <div>Loading...</div>;
   }  
   
+  //map throught the symbols
   const renderedList = _.map(symbols, (symbolName, symbolKey) => {
     return (
       <option value={symbolKey} key={symbolKey}>{symbolName}</option>

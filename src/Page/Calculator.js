@@ -16,7 +16,6 @@ function Calculator() {
         const fetchData = async() => {
             try {
                 const res = await axios.get('/symbols');
-                console.log(res)
                 setSymbol(res.data.symbols)
             } catch(err) {
                 
